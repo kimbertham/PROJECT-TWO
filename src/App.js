@@ -4,16 +4,21 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import FilmChoice from './components/FilmChoice'
+import Movies from './components/Movies/Movies'
+import Footer from './components/common/Footer'
+
 
 const App = () => {
   return (
     <div className='container'>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/game' component={FilmChoice} />
+          <Route path='/movies' component={Movies}/>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
  
