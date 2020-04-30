@@ -3,9 +3,6 @@ import FilmChoice from './FilmChoice'
 
 class GameLogic extends React.component {
 
-
-
-
   render() {  
 
     return ( 

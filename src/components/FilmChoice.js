@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import FilmCard from '../components/FilmCard'
-import { randomNum } from '../lib/api'
+
 // import GameLogic from './GameLogic'
 
 class FilmChoice extends React.Component{
@@ -63,11 +63,11 @@ async componentDidMount() {
     if (userChoice === this.state.winner){
       console.log('nice job')
       this.setState({ outcome: `Right!!   ${this.state.winner}` })
-      this.state.showScore(true)
+      this.setState({ showScore: true })
     } else {
       console.log('dum dum')
       this.setState({ outcome: `Wrong!! ${this.state.winner}` })
-      this.state.showScore(true)
+      this.setState({ showScore: true })
     }
   }
   
@@ -103,7 +103,7 @@ render() {
               <div className='left-movie' value='movieOne'>
                 <FilmCard  {...this.state.movieOne} />
                 <button onClick={this.functionTest} value={this.state.movieOne.title} className="chooseButton">{this.state.movieOne.title}</button>
-                <p className={`no-show ${this.state.showScore ? 'add-on-click' : '' }`} >     
+                <p className={this.state.showScore ? 'add-on-click' : 'no-show'} >     
                   {this.state.movieOne.popularity}</p>
               </div>
             </div>
@@ -112,17 +112,19 @@ render() {
               <div onClick={this.functionTest}  className='right-movie'>
                 <FilmCard {...this.state.movieTwo} />
                 <button onClick={this.functionTest} value={this.state.movieTwo.title} className="chooseButton">{this.state.movieTwo.title}</button>
-                <p>{this.state.movieOne.popularity}</p>
+                <p className={this.state.showScore ? 'add-on-click' : 'no-show'} >     
+                  {this.state.movieTwo.popularity}</p>
               </div>
             </div>
-            <button onClick={this.resetFunction} className='nextButton'> Next</button>
+           
           </div> 
 
 
           <div className='winner-container'>
             <div className='winner-movie'>
-              <div className='results'> 
-              Results: <br/> <span className='outcome'> {this.state.outcome} </span>
+              <div className={`results ${this.state.showScore ? 'add-on-click' : 'no-show'}`}> 
+                <span className='outcome'> {this.state.outcome} </span>
+                <button onClick={this.resetFunction} className='nextButton'> Next</button>
               </div>
             </div>
           </div>

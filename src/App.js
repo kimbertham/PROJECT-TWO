@@ -4,22 +4,19 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import FilmChoice from './components/FilmChoice'
- 
+
 const App = () => {
   return (
     <div className='container'>
       <Header />
-
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Switch>
-          <Route path='/' components={Home}/>
+          <Route exact path='/' component={Home} />
           <Route path='/game' component={FilmChoice} />
         </Switch>
       </BrowserRouter>
-
-      <Home /> */}
-      <FilmChoice />
     </div>
+ 
   )
 }
 
