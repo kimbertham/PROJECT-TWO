@@ -8,7 +8,8 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <Main />
+      {/* <Main /> */}
+      <FilmChoice />
     </div>
   )
 }
