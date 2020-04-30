@@ -2,14 +2,14 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header> 
-      <ul className='nav-bar'>
-        <li> nav bar</li>
-        <li> nav bar</li>
-        <li> nav bar</li>
-      </ul>
-      <div className='hero'>
-        <h1 className='title'></h1>
+    <header>
+      <div className='nav-bar'>
+        <h1 className='title'>Movie Rater</h1> 
+        {/* <ul className='nav-options'>
+          <li>The Rater</li>
+          <li>Advice</li>
+          <li>Drink</li>
+        </ul> */}
       </div>
     </header>
   )
