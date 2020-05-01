@@ -5,7 +5,6 @@ import FilmCard from '../components/FilmCard'
 
 class FilmChoice extends React.Component{
 state = {
-  filmPage: '',
   movieOne: { },
   movieTwo: { }, 
   winner: '',
@@ -16,7 +15,6 @@ state = {
 
 resetFunction = () => {
   this.setState({
-    filmPage: '',
     movieOne: { },
     movieTwo: { }, 
     winner: '',
@@ -29,7 +27,7 @@ resetFunction = () => {
 }
 
 async componentDidMount() {
-  const numPage = Math.floor(Math.random() * 6)
+  const numPage = Math.floor(Math.random() * 10)
   try {
     const res = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=9d98d11acbe50d0fea04f4ec6a695022&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${numPage}1&with_original_language=en`)
     console.log('page number', numPage)
@@ -70,12 +68,10 @@ async componentDidMount() {
     this.setState({ side })
 
     if (userChoice === this.state.winner){
-      console.log('nice job')
-      this.setState({ outcome: `Right!!   ${this.state.winner}` })
+      this.setState({ outcome: ' You were right!!' })
       this.setState({ showScore: true })
     } else {
-      console.log('dum dum')
-      this.setState({ outcome: `Wrong!! ${this.state.winner}` })
+      this.setState({ outcome: ' Unlucky! Maybe try again dum dum... ' })
       this.setState({ showScore: true })
     }
   }
@@ -91,48 +87,67 @@ comparePop = () => {
     this.setState(  { winner }  ) 
   }
 }
+ 
+// leftHide = () => setInterval(this.hideBox, 3000)
+
   
+hideBox = (event)  => {
+  
+  console.log('clicked')
+  return this.state.side === event ? 'loser' : ''
+// right==== this.state.side === 'right' ? 'loser' : ''
+// left ===== this.state.side === 'right' ? 'loser' : ''
+}
+
+
+
+
 render() {
   return (
     <>
       <main> 
         <div className='main-container'>
-          {/* <h1>Movie Rater or st</h1>
-        <h2> info about game how to play blah blah alla dat</h2> */}
-          
           <div className='game-container'>
-
-
             <div className='films-container'>
-              <div className='left-movie' value='movieOne'>
-                <FilmCard  {...this.state.movieOne} />
-                <button onClick={this.functionTest} value={this.state.movieOne.title} className="chooseButton">{this.state.movieOne.title}</button>
-                <p className={this.state.showScore ? 'add-on-click' : 'no-show'} >     
-                  {this.state.movieOne.popularity}</p>
+
+              <div className={this.state.side === 'left' ? 'winner' : ''}>
+                <div className='left-movie' value='movieOne'>
+                  <FilmCard {...this.state.movieOne} />
+                  <button
+                    onClick={this.functionTest}
+                    value={this.state.movieOne.title}
+                    className={this.state.showScore ? 'no-show' : 'chooseButton'}
+                  >{this.state.movieOne.title}</button>
+
+                  <p className={`'score' ${this.state.showScore ? 'add-on-click' : 'no-show'}`}>{this.state.movieOne.popularity}</p>
+                </div>
               </div>
 
               <div className='versus'></div>
 
-              <div className='grey-holder'>
-                <div className={`left-grey-cover ${this.state.side === 'right' ? 'loser' : ''}`}>helooooo</div>
-                <div className={`right-grey-cover ${this.state.side === 'left' ? 'loser' : ''}`}>helooooo</div>
-              </div>
 
-              <div onClick={this.functionTest}  className='right-movie'>
-                <FilmCard {...this.state.movieTwo} />
-                <button onClick={this.functionTest} value={this.state.movieTwo.title} className="chooseButton">{this.state.movieTwo.title}</button>
-                <p className={this.state.showScore ? 'add-on-click' : 'no-show'} >     
-                  {this.state.movieTwo.popularity}</p>
+              <div className={this.state.side === 'right' ? 'winner' : ''} value='movieTwo'>
+                <div className='right-movie' value='movieTwo'>
+                  <FilmCard {...this.state.movieTwo} />
+                  <button 
+                    onClick={this.functionTest} 
+                    value={this.state.movieTwo.title} 
+                    className={this.state.showScore ? 'no-show' : 'chooseButton'}
+                  >{this.state.movieTwo.title}</button>
+
+                  <p className={this.state.showScore ? 'add-on-click' : 'no-show'}>{this.state.movieTwo.popularity}</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className='winner-container'>
             <div className='winner-movie'>
-              <div className={`results ${this.state.showScore ? 'add-on-click' : 'no-show'}`}> 
-                <span className='outcome'> {this.state.outcome} </span>
-                <button onClick={this.resetFunction} className='nextButton'> Next</button>
+              <div className={`results ${this.state.showScore ? 'add-on-click-two' : 'no-show'}`}> 
+                <span className='outcome'> <p>{this.state.outcome}  </p> IMDb reckons {this.state.winner} is the better film</span>
+                <button onClick={this.resetFunction} className='nextButton'><p><b>> > ></b></p></button>
               </div>
+              <div className='next-button-div'></div>
             </div>
           </div>
         </div>

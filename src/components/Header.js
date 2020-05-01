@@ -9,7 +9,6 @@ const Header = () => (
         <Link to='/' className='navbar-item'> <p> Home</p>  </Link>
         <Link to='/movies' className='navbar-item'> New Movies! </Link>
         <Link to='/game' className='navbar-item'> Guess Movie Ratings! </Link>
-        <li>Drink</li>
       </ul>
     </div>
   </header>
