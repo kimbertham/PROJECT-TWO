@@ -102,6 +102,7 @@ hideBox = (event)  => {
 
 
 
+
 render() {
   return (
     <>
@@ -111,7 +112,7 @@ render() {
             <div className='films-container'>
 
               <div className={this.state.side === 'left' ? 'winner' : ''}>
-                <div className='left-movie' value='movieOne'>
+                <div className='movie' value='movieOne'>
                   <FilmCard {...this.state.movieOne} />
                   <button
                     onClick={this.functionTest}
@@ -127,7 +128,7 @@ render() {
 
 
               <div className={this.state.side === 'right' ? 'winner' : ''} value='movieTwo'>
-                <div className='right-movie' value='movieTwo'>
+                <div className='movie' value='movieTwo'>
                   <FilmCard {...this.state.movieTwo} />
                   <button 
                     onClick={this.functionTest} 
