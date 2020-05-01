@@ -1,6 +1,6 @@
 * {
   margin:0;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Rubik', sans-serif;
 }
 body {
   background-image: url('../styles/imgs/background\ copy.jpg');
@@ -14,24 +14,38 @@ main{
 }
 }
 
-.home-page{
-margin: 0 auto;
-margin-top: 100px;
-// border: 2px solid red;
-width: 500px;
-height: 500px;
-align-items: center;
-  .home-div{
+.home-container {
+  height:90vh;
+color: black;
+  .home-page{
+    margin: 0 auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100px;
-    width:400px;
-    margin:30px;
-    background-color:whitesmoke;
-    border-radius: 3px;
-    border: px outset black;
-  }
+    border-radius: 20px;
+    width: 800px;
+    height: 600px;
+    background-color: rgba(152, 80, 80, 0.9);
+    
+    .home-div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100px;
+      width:400px;
+      margin-top:30px;
+      background-color:rgba(0,0,0, 0.6);
+      border-radius: 3px;
+      border: px outset black;
+      
+    }
+    a{
+      color: white;
+      font-size: 40px;
+      text-decoration: none;
+    }
+}
 }
 
 
