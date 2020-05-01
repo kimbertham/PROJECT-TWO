@@ -75,7 +75,6 @@ align-items: center;
 
 .game-container{
   // border: 2px solid black;
-
   display: flex;
   justify-content: center;
   padding:40px;
@@ -96,6 +95,17 @@ align-items: center;
       background-color: grey;
       height: 400px;
       width: 250px;
+      z-index: 1;
+    }
+    .right-movie{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: grey;
+      height: 400px;
+      width: 250px;
+      z-index: 1;
     }
 .versus {
   opacity: 0.8;
@@ -105,16 +115,36 @@ align-items: center;
   width: 100px;
   height: 85px;
 }
-    .right-movie{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: grey;
-      z-index: 1;
+  .grey-holder{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    height: 400px;
+    // border: 2px solid black;
+
+    .right-grey-cover {
+      z-index: -1;
       height: 400px;
       width: 250px;
+      background-color: red;
     }
+
+    .left-grey-cover {
+      z-index: -1;
+      height: 400px;
+      width: 250px;
+      // background-color: black;
+    }
+  
+
+  .loser{
+    z-index: 2;
+    height: 400px;
+    width: 250px;
+    background-color: rgba(0,0,0, 0.7)
+  }
+}
     
   }
   }

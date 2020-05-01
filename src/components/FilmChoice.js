@@ -10,7 +10,8 @@ state = {
   movieTwo: { }, 
   winner: '',
   outcome: '',
-  showScore: false
+  showScore: false,
+  side: ''
 }
 
 resetFunction = () => {
@@ -20,7 +21,8 @@ resetFunction = () => {
     movieTwo: { }, 
     winner: '',
     outcome: '',
-    showScore: false
+    showScore: false,
+    side: ''
   }
   )
   this.componentDidMount()
@@ -59,6 +61,14 @@ async componentDidMount() {
 
   functionTest = (event) => {
     const userChoice = event.target.value
+    let side 
+    if (this.state.movieOne.popularity > this.state.movieTwo.popularity) {
+      side = 'left'
+    } else {
+      side = 'right'
+    }
+    this.setState({ side })
+
     if (userChoice === this.state.winner){
       console.log('nice job')
       this.setState({ outcome: `Right!!   ${this.state.winner}` })
@@ -70,7 +80,6 @@ async componentDidMount() {
     }
   }
   
-
 comparePop = () => {
   const movieOnePop = this.state.movieOne.popularity
   const movieTwoPop = this.state.movieTwo.popularity
@@ -105,8 +114,8 @@ render() {
               <div className='versus'></div>
 
               <div className='grey-holder'>
-                <div className={'left-grey-cover {this.state.side === \'left\' ? \'loser\' : \'\' }'} >helooooo</div>
-                <div className='right-grey-cover'>helooooo</div>
+                <div className={`left-grey-cover ${this.state.side === 'right' ? 'loser' : ''}`}>helooooo</div>
+                <div className={`right-grey-cover ${this.state.side === 'left' ? 'loser' : ''}`}>helooooo</div>
               </div>
 
               <div onClick={this.functionTest}  className='right-movie'>
