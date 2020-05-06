@@ -8,7 +8,7 @@ state={
 
 async componentDidMount() {
   const movieId = this.props.match.params.id
-  const movieData = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a6f34e87c9902a29316fd7cff8f50328&language=en-US`)
+  const movieData = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_MOVIES_KEY}&language=en-US`)
   this.setState({ movieData: movieData.data })
 }
 

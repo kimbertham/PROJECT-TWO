@@ -9,7 +9,7 @@ class Movies extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=a6f34e87c9902a29316fd7cff8f50328&language=en-US&page=1')
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIES_KEY}&language=en-US&page=1`)
     this.setState( { moviePage: res.data.results })
   }
 test = () => {
@@ -17,7 +17,6 @@ test = () => {
 }
 
 render(){
-  console.log(this.state.moviePage)
   return (
     <>
       <header className='movies-header'>

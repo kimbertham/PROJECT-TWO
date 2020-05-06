@@ -28,14 +28,14 @@ main{
 .container {
   .home-page{
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     width: 800px;
     height: 600px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: rgba(152, 80, 80, 0.9);
     
     .home-div{
@@ -159,7 +159,7 @@ max-width: 1000px;
 
 .winner {
     .movie-poster{
-      animation: increaseShadow 5s infinite;
+      animation: increaseShadow 3s infinite;
     }
 }
 @keyframes increaseShadow {
@@ -348,7 +348,7 @@ align-items: center;
 //------------------
 .show-container {
   margin-top:100px;
-  height: 750px;
+  height: 80vh;
 display: flex;
 p {
   margin: 25px;

@@ -29,10 +29,8 @@ resetFunction = () => {
 async componentDidMount() {
   const numPage = Math.floor(Math.random() * 10)
   try {
-    const res = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=9d98d11acbe50d0fea04f4ec6a695022&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${numPage}1&with_original_language=en`)
+    const res = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIES_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${numPage}1&with_original_language=en`)
     console.log('page number', numPage)
-
-
 
     const firstNumber = Math.floor(Math.random() * 20)
     let secondNumber 
@@ -53,8 +51,6 @@ async componentDidMount() {
     console.log(err)
   }
 }
-
-
 
 
   functionTest = (event) => {
