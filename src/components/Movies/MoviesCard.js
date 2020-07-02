@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { poster } from '../common'
 
 const MovieCard = ({ title, poster_path, id  }) =>{
   return (
@@ -9,7 +11,11 @@ const MovieCard = ({ title, poster_path, id  }) =>{
         <div className='movie-title'>
           <p>{title}</p>
         </div>
-        <img className='movie-img' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`} />
+
+        <img className='movie-img' 
+          src={`${poster}${poster_path}`} 
+          alt={title} />
+          
       </div>
     </Link>
   )

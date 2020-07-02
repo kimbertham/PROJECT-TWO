@@ -19,20 +19,20 @@ test = () => {
 render(){
   return (
     <>
-      <header className='movies-header'>
-        <div className='title'>
-          <h1> New Movies</h1>
-        </div>
+
+      <header className='movies-header center'>
+        New Movies
       </header>
 
-
-      <div className='movie-container'>
-        <div className='lined-movies'>
-          {this.state.moviePage.map(movie =>{
-            return <MovieCard onClick={this.test} key={movie.id} {...movie}/>
-          })}
-        </div>
+      <div className='movie-container center'>
+        {this.state.moviePage.map(movie =>{
+          return <MovieCard 
+            onClick={this.test}
+            key={movie.id} 
+            {...movie}/>
+        })}
       </div>
+
     </>
   )
 }

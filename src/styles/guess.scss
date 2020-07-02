@@ -1,0 +1,121 @@
+.game-container{
+  padding:50px 50px 10px 50px;
+  border-radius: 15px;
+  background-color:rgba(152, 80, 80,0.9);
+  width: 50%;
+  min-height:67vh;
+  }    
+
+.films-container {
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.movie{
+  width: 28%;
+  .movie-poster{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .movie-flash {
+    animation: increaseShadow 2s infinite;
+    
+    @keyframes increaseShadow {
+        50% {box-shadow: 0px 0px 60px rgba(255,255,255, 1)}
+      }
+  }
+
+  .movie-dim {
+    -webkit-filter: brightness(20%);
+    filter:brightness(40%);
+  }
+
+  .chooseButton{
+    background-color: rgba(99, 56, 56, 0.9);
+    margin: 10px 0px;
+    border:none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+  }
+
+}
+
+.versus {
+  opacity: 0.8;
+  background-image: url('../styles/imgs/versus.jpg');
+  background-size: cover;
+  width: 100px;
+  height: 85px;
+}
+
+.results {
+  text-align: center;
+  .winner-span{
+    color: rgba(222, 216, 216, 0.9);
+    text-decoration: underline;
+    font-size: 1.5em;
+  }
+  .outcome-span{
+    color: rgba(222, 216, 216, 0.9);
+    font-size: 1.2em;
+
+  }
+  .outcome {
+    font-size: 1.5em;
+    color: rgba(79, 18, 18, 0.9);
+    }
+} 
+
+.nextButton {
+  
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  margin-top:5px;
+  p{
+    color: rgba(79, 18, 18, 0.9);
+  }
+  animation: move 1.2s infinite;
+  @keyframes move {
+    0% {
+      transform: translate(0, 3px);
+    }
+    35% {
+      transform: translate(10px, 3px);
+    }
+    70% {
+      translate: translate(0, 3px);
+    }
+    100% {
+      transform: translate(0, 3px);
+    }
+  }
+}
+
+//SCORE 
+.score-toggle{
+  font-size: 25px;
+  color: rgb(96, 22, 22);
+}
+.score-board {
+  display: flex;
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(152, 80, 80,0.9);
+  width:15vw;
+  border-radius: 15px;
+  margin:20px;
+  .score-num{
+    margin-left:20px;
+    width: 100%;
+    border-radius: 10px;
+    color: rgba(131, 55, 55, 0.9);
+    background-color: rgba(238, 235, 235, 0.7);
+  }
+  .score-img{
+    width:50%;
+    opacity: 0.9;
+  }
+}

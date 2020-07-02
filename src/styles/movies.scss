@@ -1,0 +1,55 @@
+
+//MOVIESHOW
+.movie-card {
+  * { 
+    color: black;
+  }
+  display: flex;
+  padding: 50px;
+  border-radius: 20px;
+  width: 50vw;
+  background-color: rgba(255,255,255, 0.8);
+  .movie-img {
+    height: 50vh;
+  }
+  h1{
+    text-align: center;
+    font-size: 3em;
+  }
+  .movie-info {
+    padding: 30px;
+    color: black
+  }
+}
+
+//Movies.js
+
+.movies-header {
+  margin: 30px;
+  font-size: 5em;
+  color: rgba(0,0,0, 0.7);
+
+}
+
+.movie-container {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+
+//MOVIESCARD.js
+  .card-container {
+  width:15vw;
+  border: 2px solid  rgb(126, 61, 61);
+  background-color: rgba(152, 80, 80, 0.7);
+  margin: 10px;
+  padding:5px;
+  .movie-title{
+    padding: 5px;
+    font-size: 1em;
+  }
+  .movie-img {
+    width:100%;
+  }
+}

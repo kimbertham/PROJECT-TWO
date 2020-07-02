@@ -1,39 +1,58 @@
+/* eslint-disable camelcase */
 import React from 'react'
 import axios from 'axios'
+import { poster,oneMovie } from '../common'
 
 class MovieShow extends React.Component {
+
 state={
   movieData: []
 }
 
 async componentDidMount() {
   const movieId = this.props.match.params.id
-  const movieData = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_MOVIES_KEY}&language=en-US`)
-  this.setState({ movieData: movieData.data })
+  const res = await axios.get(`${oneMovie}${movieId}?api_key=${process.env.REACT_APP_MOVIES_KEY}&language=en-US`)
+  const movieData = res.data
+  this.setState({ movieData })
 }
 
 render() {
-  console.log(this.state.movieData)
-  const { poster_path, title, original_language, release_date, overview, tagline } = this.state.movieData
+  const { movieData }  = this.state
   return (
-    <div className='show-container'>
+    <main>
       <div className='movie-card'>
-        <div className ='movie-image'>
-          <img className='movie-img' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`}/>
-        </div>
+
+        
+        <img className='movie-img' 
+          alt={movieData.title} 
+          src={`${poster}${movieData.poster_path}`}/>
 
         <div className='movie-info'>
-          <div className='title'> {title}</div>
-
-          <div className='info-text'>
-            <p>{tagline}</p>
-            <p> Language {original_language}</p>
-            <p> Release year: {release_date}</p>
-            <p> Overview: {overview}</p>
-          </div>
+          <h1> {movieData.title}</h1>    
+          <h2>{movieData.tagline}</h2>
+          <br/>
+          <p> Language: {movieData.original_language}</p>
+          <p> Release year: {movieData.release_date}</p>
+          <p> Genres: 
+            {movieData.genres ?
+              movieData.genres.map(genre => {
+                return ` ${genre.name}, `
+              }) : ''}
+          </p> 
+          <p> Production: 
+            {movieData.production_companies ? 
+              movieData.production_companies.map(comp => {
+                return ` ${comp.name},`
+              }) : ''}
+          </p>
+          <p>Runtime: {movieData.runtime} mins </p>
+          <p>Vote average: { movieData.vote_average}/10 </p>
+          <br/>
+          <p> Overview: <br/> {movieData.overview}</p>
         </div>
+
       </div>
-    </div>
+    </main>
   )
 }
 }
