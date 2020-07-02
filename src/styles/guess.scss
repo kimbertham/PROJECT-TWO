@@ -1,3 +1,6 @@
+
+//FILMCHOICE
+
 .game-container{
   padding:50px 50px 10px 50px;
   border-radius: 15px;
@@ -11,6 +14,16 @@
   width: 100%;
   margin-bottom: 2%;
 }
+
+.versus {
+  opacity: 0.8;
+  background-image: url('../styles/imgs/versus.jpg');
+  background-size: cover;
+  width: 100px;
+  height: 85px;
+}
+
+//FILMCARD.js
 
 .movie{
   width: 28%;
@@ -39,28 +52,23 @@
     width: 100%;
     font-size: 1em;
   }
-
 }
 
-.versus {
-  opacity: 0.8;
-  background-image: url('../styles/imgs/versus.jpg');
-  background-size: cover;
-  width: 100px;
-  height: 85px;
-}
+
+// FILMWINNER.js
 
 .results {
   text-align: center;
+  width: 100%;
+  height: 100%;
   .winner-span{
     color: rgba(222, 216, 216, 0.9);
     text-decoration: underline;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .outcome-span{
     color: rgba(222, 216, 216, 0.9);
     font-size: 1.2em;
-
   }
   .outcome {
     font-size: 1.4em;
@@ -69,7 +77,6 @@
 } 
 
 .nextButton {
-  
   border: none;
   background-color: transparent;
   font-size: 25px;
@@ -94,46 +101,58 @@
   }
 }
 
-//SCORE 
-.toggle-text{
-  font-size: 20px;
-  color: rgb(206, 91, 91);
-  -webkit-text-stroke:2px rgb(159, 72, 72);
+
+
+.film-settings{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width:22vw;
 }
 
-.score-board {
+//SCORE 
+.toggle-text{
+  font-size: 15px;
+  color: #ffffff;
+
+}
+
+.board {
   display: flex;
-  position: absolute;
   padding: 20px;
   background-color: rgba(152, 80, 80,0.9);
-  width:15vw;
+  width:100%;
   border-radius: 15px;
-  margin:20px;
-  .score-num{
-    margin-left:5px;
-    width: 100%;
-    border-radius: 10px;
-    color: rgba(131, 55, 55, 0.9);
-    background-color: rgba(238, 235, 235, 0.7);
-  }
-  .score-img{
-    width:50%;
-    opacity: 0.9;
-  }
+  margin:4% 10% 0 10%;
+}
+
+.board-fill{
+  margin-left:5px;
+  width: 100%;
+  border-radius: 10px;
+  color: rgba(131, 55, 55, 0.9);
+  background-color: rgba(238, 235, 235, 0.7);
+}
+.score-img{
+  width:50%;
+  opacity: 0.9;
 }
 
 //Drink
 .drink-toggle{
-  margin-top:50px;
+  margin-top:40px;
+  float: bottom;
   p{
     margin-top:15px;
   }
 }
 
-.drink-container{
-  margin-top: 7.5%;
-}
 .drink-img{
   width: 30%;
   opacity: 0.8;
+}
+.drink-text{
+  padding:10px;
+  text-align: center;
+  font-size: 15px;
 }

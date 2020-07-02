@@ -9,7 +9,6 @@ class DrinkMode extends React.Component {
   handleDrink = () => {
     this.setState({ show: !this.state.show })
   }
-  
 
   render(){
     const { show } = this.state
@@ -26,10 +25,11 @@ class DrinkMode extends React.Component {
         </div> 
         
               
-        <div className={show ? 'score-board drink-container' : 'no-show'}> 
+        <div className={show ? 
+          'board drink-container' : 'no-show'}> 
           <img src={image} className='drink-img' alt='score'/>
-          <div className='score-num center'>
-            {this.props.playerScore}
+          <div className='board-fill drink-text center'>
+            {this.props.rule}
           </div>
         </div>
 

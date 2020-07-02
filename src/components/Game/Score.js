@@ -25,9 +25,9 @@ class Score extends React.Component {
           </label>
         </div> 
       
-        <div className={show ? 'score-board' : 'no-show'}>
+        <div className={show ? 'board' : 'no-show'}>
           <img src={image} className='score-img' alt='score'/>
-          <div className='score-num center'>
+          <div className='board-fill center'>
             {this.props.playerScore}
           </div>
         </div>

@@ -2,9 +2,10 @@ import React from 'react'
 import axios from 'axios'
 import FilmCard from './FilmCard'
 import FilmWinner from './FilmWinner'
-import { baseURL } from '../common'
+import { baseURL, loseOptions, winnerOptions } from '../common'
 import Score from './Score'
 import DrinkMode from './DrinkMode'
+
 
 class FilmChoice extends React.Component{
 state = {
@@ -14,7 +15,8 @@ state = {
   outcome: '',
   score: 0,
   showScore: false,
-  flash: false
+  flash: false,
+  rule: ''
 }
 
 async componentDidMount() {
@@ -24,7 +26,7 @@ async componentDidMount() {
 getData = async () => {
   try {
 
-    this.setState({ showScore: false, flash: false })
+    this.setState({ showScore: false, flash: false,  rule: '' })
 
     const firstNumber = Math.floor(Math.random() * 20)
     let secondNumber 
@@ -48,25 +50,46 @@ getData = async () => {
 }
 
 outcome = (title) => {
+  
   if (this.state.showScore === true) return
-  const outcome = title === this.state.winner ? 
-    'You were right!!' : 'Unlucky!'
-  const score = title === this.state.winner ? 
-    this.state.score + 1 : 0
-  this.setState({ outcome, showScore: true, flash: true, score  })
+
+  const num = Math.floor(Math.random() * 8)
+  let score
+  let outcome
+  let rule 
+
+
+  if (title === this.state.winner) {
+    outcome = 'You were right!!' 
+    score = this.state.score + 1
+    rule = winnerOptions[num]
+  } else {
+    outcome = 'Unlucky!'
+    score = 0
+    rule = loseOptions[num]
+  }
+
+  this.setState({ 
+    outcome,
+    rule,
+    showScore: true,
+    flash: true, score
+  })
 }
   
 
 render() {
-  const { showScore,winner, outcome, flash, score } = this.state
+  const { showScore,winner, outcome, flash, score, rule } = this.state
+  console.log(this.state.rule)
   return (
     <>
 
-  
-      <Score
-        playerScore={score}/>
-
-      <DrinkMode/>
+      <div className='film-settings'>
+        <Score
+          playerScore={score}/>
+        <DrinkMode
+          rule={rule}/>
+      </div>
 
       <main> 
         <div className='game-container'>
