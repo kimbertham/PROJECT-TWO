@@ -4,6 +4,7 @@ import FilmCard from './FilmCard'
 import FilmWinner from './FilmWinner'
 import { baseURL } from '../common'
 import Score from './Score'
+import DrinkMode from './DrinkMode'
 
 class FilmChoice extends React.Component{
 state = {
@@ -64,6 +65,8 @@ render() {
   
       <Score
         playerScore={score}/>
+
+      <DrinkMode/>
 
       <main> 
         <div className='game-container'>

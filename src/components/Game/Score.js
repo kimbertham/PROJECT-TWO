@@ -16,7 +16,7 @@ class Score extends React.Component {
     return (
       <>
         <div className='switch-position center'>
-          <p className='score-toggle'> Score </p>
+          <p className='toggle-text'> Score </p>
           <label className="switch">
             <input 
               type="checkbox"
@@ -30,7 +30,6 @@ class Score extends React.Component {
           <div className='score-num center'>
             {this.props.playerScore}
           </div>
-
         </div>
       </>
     )

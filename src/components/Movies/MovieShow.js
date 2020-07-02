@@ -20,7 +20,7 @@ render() {
   const { movieData }  = this.state
   return (
     <main>
-      <div className='movie-card'>
+      <div className='movie-card center'>
 
         
         <img className='movie-img' 

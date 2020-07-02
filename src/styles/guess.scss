@@ -55,7 +55,7 @@
   .winner-span{
     color: rgba(222, 216, 216, 0.9);
     text-decoration: underline;
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .outcome-span{
     color: rgba(222, 216, 216, 0.9);
@@ -63,7 +63,7 @@
 
   }
   .outcome {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: rgba(79, 18, 18, 0.9);
     }
 } 
@@ -95,10 +95,12 @@
 }
 
 //SCORE 
-.score-toggle{
-  font-size: 25px;
-  color: rgb(96, 22, 22);
+.toggle-text{
+  font-size: 20px;
+  color: rgb(206, 91, 91);
+  -webkit-text-stroke:2px rgb(159, 72, 72);
 }
+
 .score-board {
   display: flex;
   position: absolute;
@@ -108,7 +110,7 @@
   border-radius: 15px;
   margin:20px;
   .score-num{
-    margin-left:20px;
+    margin-left:5px;
     width: 100%;
     border-radius: 10px;
     color: rgba(131, 55, 55, 0.9);
@@ -118,4 +120,20 @@
     width:50%;
     opacity: 0.9;
   }
+}
+
+//Drink
+.drink-toggle{
+  margin-top:50px;
+  p{
+    margin-top:15px;
+  }
+}
+
+.drink-container{
+  margin-top: 7.5%;
+}
+.drink-img{
+  width: 30%;
+  opacity: 0.8;
 }
