@@ -1,5 +1,5 @@
 <h1> MoviRatr </h1>
-
+<p> Link:  https://movi-rate.netlify.app/movies
 <h2> Brief </h3>
 <p> General Assembly Hackathon: Create a frontend web app using an API of your choosing in 48 hours.</p>
 <p>Team mate: https://github.com/brobo01/ </p>
