@@ -53,9 +53,11 @@
  <p> With more time to spare we decided to quickly pull together our intial idea and create a new movies page that provided the user with details on a selected movie. We created a reusable MovieCard component and fed in the data through props. </p> 
  
  <h4> AFTER PROJECT: drink mode and score </h4>
- <p> After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice.  </p>
+ <p> 
+  After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice. 
+<img src='https://i.imgur.com/pPBK725.png' alt='drink' width='200'/>
+</p>
   
-  <img src='https://i.imgur.com/pPBK725.png' alt='drink width='200'/>
   
 <h2> Difficulties </h2> 
 <ul>
