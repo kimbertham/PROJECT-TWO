@@ -52,10 +52,12 @@
  <h4> AFTER PROJECT: drink mode and score </h4>
  <p> After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice. 
   
-<h4> Difficulties </h4> 
+<h2> Difficulties </h2> 
 <ul>
 <p><li>Once we began writing the function to store the winner and loser movie in state, we realised we would occasionally get the same movie twice and had to ensure the two chosen movies would not be the same. We generated two random numbers, one for each movie and also one random movie for the results page number on the axios request. </li></p>
+  
 ```
+  
 getData = async () => {
   try {
 
@@ -81,6 +83,19 @@ getData = async () => {
     console.log(err)
   }
 }
+
 ```
 <p></li> As we didnt have very much time to work through the project, we initially were worried about planning and timing constraints as we also wanted to have enough time to finish styling for presenation. Later on in the project we felt a lot better once we had completed the basis of the app and gained a more realistic idea of how much time would be necessary for each task.</li></p>
 </ul>
+
+<h2> Wins </h2>
+<ul>
+  <li><p>Creating out states to fit with the jsx really cut down on our code so we were able utilise the altering stages to work well with the stlying </p> </li>
+  <li><p> Communicating with each other was very easy and made the decisions process fast as we always took each others notes into consideration.
+  </ul>
+  
+<h2> Bugs and future work </h2>
+<p> One of the small issues we have is empty divs when the API does not provide and image. This could quickly be solved with default image put into place. </p>
+
+<h2> Experience and takeaways </h2>
+<p> Working with a new framework has proven to me an invaluable experience and has shown me a lot about reusable code. This project also taugh me a lot about working with others remotely under a time limit, I am better able to articulate myself coherently in terms of code to others. I found working with Ben enjoyable and it taught me a lot. 
