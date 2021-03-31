@@ -5,7 +5,7 @@
 <p>Team mate: https://github.com/brobo01/ </p>
 
 <h2> Demo </h2>
-<img src='https://imgur.com/P5XaycF' alt='demo'/>
+<img src='https://i.imgur.com/L2in5uo.gif' alt='demo'/>
 
 <h2> Technologies </h2>
 <ul>
