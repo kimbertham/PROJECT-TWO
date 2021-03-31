@@ -4,6 +4,9 @@
 <p> General Assembly Hackathon: Create a frontend web app using an API of your choosing in 48 hours.</p>
 <p>Team mate: https://github.com/brobo01/ </p>
 
+<h2> Demo </h2>
+<img src='https://imgur.com/P5XaycF' alt='demo'/>
+
 <h2> Technologies </h2>
 <ul>
   <li><p>JavaScript</p></li>
