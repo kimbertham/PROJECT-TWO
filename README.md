@@ -52,8 +52,8 @@
  <h4> Movie information </h4> 
  <p> With more time to spare we decided to quickly pull together our intial idea and create a new movies page that provided the user with details on a selected movie. We created a reusable MovieCard component and fed in the data through props. </p> 
  <p float='left'>
- <img src='https://i.imgur.com/2LlFlRZ.jpg' alt='info' width='300'/>
- <img src='https://i.imgur.com/rWYIOl5.png' alt='info' width='300'/>
+ <img src='https://i.imgur.com/2LlFlRZ.jpg' alt='info' width='400'/>
+ <img src='https://i.imgur.com/rWYIOl5.png' alt='info' width='400'/>
   </p>
  <h4> AFTER PROJECT: drink mode and score </h4>
  <p> 
