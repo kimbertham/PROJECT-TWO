@@ -51,9 +51,10 @@
  ```
  <h4> Movie information </h4> 
  <p> With more time to spare we decided to quickly pull together our intial idea and create a new movies page that provided the user with details on a selected movie. We created a reusable MovieCard component and fed in the data through props. </p> 
- <img src='https://i.imgur.com/2LlFlRZ.jpg' alt='info' width='200'/>
- 
- <img src='https://i.imgur.com/rWYIOl5.png' alt='info' widnth='200'/>
+ <p float='left'>
+ <img src='https://i.imgur.com/2LlFlRZ.jpg' alt='info' width='300'/>
+ <img src='https://i.imgur.com/rWYIOl5.png' alt='info' width='300'/>
+  </p>
  <h4> AFTER PROJECT: drink mode and score </h4>
  <p> 
   After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice. 
