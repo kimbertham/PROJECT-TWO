@@ -6,9 +6,9 @@
 
 <h2> Technologies </h2>
 <ul>
-  <li><p>- JavaScript</p></li>
-  <li><p>- ReactJs</p></li>
-  <li><p>- Insomnia</p></li>
+  <li><p>JavaScript</p></li>
+  <li><p>ReactJs</p></li>
+  <li><p>Insomnia</p></li>
   <li><p>Babel</p></li>
   <li><p>Axios</p></li>
   <li></p>react-router-dom</p></li>
