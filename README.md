@@ -1,5 +1,5 @@
 <h1> MoviRatr </h1>
-<p> Link:  https://movi-rate.netlify.app/movies
+<p> Link:  https://movi-rate.netlify.app/
 <h2> Brief </h3>
 <p> General Assembly Hackathon: Create a frontend web app using an API of your choosing in 48 hours.</p>
 <p>Team mate: https://github.com/brobo01/ </p>
@@ -53,7 +53,9 @@
  <p> With more time to spare we decided to quickly pull together our intial idea and create a new movies page that provided the user with details on a selected movie. We created a reusable MovieCard component and fed in the data through props. </p> 
  
  <h4> AFTER PROJECT: drink mode and score </h4>
- <p> After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice. 
+ <p> After completing the project I decided to take a day to add a drink mode and score board to the game. The drink mode takes an array of prewritten drink rules separated as win or lose options. I added these conditions to the if else statement in the game to be set depending on the users choice.  </p>
+  
+  <img src='https://i.imgur.com/pPBK725.png' src='drink/>
   
 <h2> Difficulties </h2> 
 <ul>
